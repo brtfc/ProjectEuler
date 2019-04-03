@@ -11,39 +11,6 @@ import java.util.Set;
 
 public class LargestPrimeFactor {
 
-    public static int factorialFinder(int number){
-        if (number == 1 || number == 0) {
-            return 1;
-        }
-        else {
-            return number * factorialFinder(number-1);
-
-        }
-
-    }
-
-    //method to generate prime numbers up to int maxNumber
-
-    public static ArrayList<Integer> primeNumberFinder(int maxPrime){
-        ArrayList<Integer> primeNumbers = new ArrayList<>();
-        int eachPrimeNumber;
-
-        if(maxPrime >= 2){
-            //implement the formula based on Wilson's theorem
-            for(int i = 1; primeNumbers.size() < maxPrime; i++){
-                eachPrimeNumber = ((factorialFinder(i) % (i + 1))/i) * ((i-1) + 2);
-                if(eachPrimeNumber != 0){
-                    primeNumbers.add(eachPrimeNumber);
-                }
-            }
-        }
-        else {
-            primeNumbers.add(-1);
-        }
-
-        return primeNumbers;
-    }
-
     public static Set<Integer> sieveOfErasthothenes(int primeLimit){
         Set<Integer> primes = new HashSet<>();
         if(primeLimit >= 1){
@@ -75,7 +42,7 @@ public class LargestPrimeFactor {
     public static int largestPrimeFactor(int number){
         int largestPrimeFactor = -1;
         //divide the given number by prime numbers less than that number
-        
+
 
         return largestPrimeFactor;
     }
